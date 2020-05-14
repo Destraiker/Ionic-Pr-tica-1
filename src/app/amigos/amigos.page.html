@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Amigos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Amiginhos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-list *ngFor="let amigo of amigos">
+      <ion-item id="{{amigo.Nome}}">Nome: {{amigo.Nome}} - Idade: {{amigo.Idade}} - Nivel de Amizade: {{amigo.Nivel_de_amizade}} - <ion-button color="primary" (click)="presentActionSheet(amigo.Nome)"> <ion-icon name="settings"></ion-icon></ion-button></ion-item>
+    </ion-list>
+    
+  </div>
+</ion-content>
